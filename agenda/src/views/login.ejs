@@ -1,0 +1,55 @@
+<%- include('includes/head')%>
+    <%- include('includes/nav')%>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+
+            <div class="col-lg-8 my-5">
+                <h1 class="text-center">Criar conta ou login</h1>
+                <p class="text-center lead my-3">Faca login ou cria sua conta</p>
+
+                <div class="row">
+                  <%- include('includes/messages'); %>
+                    <div class="col-lg my-5">
+                        <h4>Faca seu cadastro</h4>
+                        <p>Cria uma conta</p>
+
+                        <form action="/login/register" method="POST">
+                            <div class="mb-3">
+                              <label for="InputEmail1" class="form-label">Email address</label>
+                              <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" name="email">
+                            </div>
+
+                            <div class="mb-3">
+                              <label for="InputPassword1" class="form-label">Password</label>
+                              <input type="password" class="form-control" id="InputPassword1" name="senha">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Cria conta</button>
+                          </form>
+                    </div>
+
+                    <div class="col-lg my-5">
+                        <h4>Faca seu login</h4>
+                        <p>Entrar no sistema</p>
+                        <form action="/login/login" method="POST">
+                            <div class="mb-3">
+                              <label for="InputEmail1" class="form-label">Email address</label>
+                              <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" name="email">
+                            </div>
+
+                            <div class="mb-3">
+                              <label for="InputPassword1" class="form-label">Password</label>
+                              <input type="password" class="form-control" id="InputPassword1" name="senha">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Acessar conta</button>
+                          </form>
+                        
+                    </div>
+                </div>
+        </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+<%- include('includes/footer')%>
